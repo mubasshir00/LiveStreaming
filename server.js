@@ -14,9 +14,11 @@ const PORT = 8000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-    origin: process.env.CORS_ORIGIN
-}));
+app.use(
+  cors({
+    origin: '*',
+  })
+);
 
 //For deploy only
 // app.use(express.static(path.join('public')));
